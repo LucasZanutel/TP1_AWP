@@ -1,0 +1,116 @@
+body{
+	background-color: #f1fbff;
+	color: #073345;
+}
+
+header{
+	background-color: #0077a9;
+	border-radius: 0px 0px 15px 15px;
+	color: white;
+}
+
+h1{
+	font-family: 'Prompt', sans-serif;
+	padding: 15px;
+}
+
+h1 span{
+	color: #073345;
+}
+
+
+.btn{
+	background-color: white;
+    margin: 0.5em 0;
+}
+
+.h2{
+	height: 30px;
+	font-family: 'Rubik', sans-serif;
+}
+
+.noEx{
+	font-size: .5em;
+	color: orange;
+}
+
+.temp0{
+	font-size: 5em;
+    line-height: 1.5em;
+    margin-bottom: -0.2em;
+}
+
+.desc{
+	font-size: 1.6em;
+}
+
+.maxT{
+	background-image: url(../img/max.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.minT{
+	background-image: url(../img/min.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.stT{
+	background-image: url(../img/sen.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.humT{
+	background-image: url(../img/hum.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.vieT{
+	background-image: url(../img/vie.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.presT{
+	background-image: url(../img/pres.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#caja1, #caja2, #caja3{
+	border-radius: 15px;
+	background-color: #e4f7ff;
+	box-shadow: -2px 2px 5px #737373;
+	max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#caja3{
+	height: 450px;
+	padding-bottom: 7em;
+	background-image: url(../img/mapa.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.items, .items2{
+	border-top: 1px solid #b3b3b3;
+}
+
+footer{
+	background-color: #0077a9;
+	color: white;
+	border-radius: 15px 15px 0px 0px ;
+	padding-bottom: 10px;
+    margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+	.items2{
+		border-top: none;
+	}
+}

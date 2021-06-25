@@ -16,10 +16,10 @@ window.onload = function(){
 }
 
 //Aqui debe ingresar su API KEY  de OpenWeatherMap
-const API_KEY= '';
+const API_KEY= 'ea9ebd49acfd1f118922735a4481f30a';
 const punto = 'https://api.openweathermap.org/data/2.5/weather';
 //Aqui debe ingresar su API KEY  de Google Maps
-const KeyMapa = '';
+const KeyMapa = 'AIzaSyBfz72v3Ai-EUFlUAWtVR-5UtMJaSjHjrk';
 
 const button = document.getElementById("sendButton");
 const inputElement = document.getElementById("search");

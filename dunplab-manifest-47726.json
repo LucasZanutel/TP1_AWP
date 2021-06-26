@@ -3,7 +3,7 @@
 	"name": "AWP WEATHER",
 	"lang": "en",
 	"description": "Pagina del Clima",
-	"start_url": "tp-1-awp.vercel.app",
+	"start_url": "/",
 	"background_color": "#074f90",
 	"theme_color": "#f3f3f3",
 	"dir": "ltr",

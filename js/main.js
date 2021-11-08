@@ -1,5 +1,6 @@
 window.onload = function(){
 	var ciudadGuardada = JSON.parse(localStorage.getItem('datosCiudad'));
+	console.log(ciudadGuardada);
 			
 	ciudad.innerHTML= ciudadGuardada.ciudad;
 	ima.src = ciudadGuardada.imagen;
@@ -15,11 +16,11 @@ window.onload = function(){
 		
 }
 
-//Aqui debe ingresar su API KEY  de OpenWeatherMap
-const API_KEY= '' ;
+
+
+const API_KEY= 'ea9ebd49acfd1f118922735a4481f30a';
 const punto = 'https://api.openweathermap.org/data/2.5/weather';
-//Aqui debe ingresar su API KEY  de Google Map
-const KeyMapa = '' ;
+const KeyMapa = 'AIzaSyBfz72v3Ai-EUFlUAWtVR-5UtMJaSjHjrk';
 
 const button = document.getElementById("sendButton");
 const inputElement = document.getElementById("search");
@@ -46,16 +47,18 @@ button.addEventListener("click", ()=>{
 });
 
 function searchCity(ciudadABuscar){
-	
+	//console.log('Palabra', ciudadABuscar);
 	const fetchPromise = fetch(`${punto}?q=${ciudadABuscar}&appid=${API_KEY}&lang=Es&units=metric`);
 	
 	fetchPromise.then(response => {
+		console.log('result', response);
 		return response.json();
 	}).then(result => {
+		console.log('Info que trae: ', result);
 		dibujar(result.weather, result.main, result.wind);
 		guardarLS(result);
 	}).catch(err =>{
-		
+		console.log("fall�: ", err);
 		ciudad.innerHTML = 'Ciudad no encontrada, vuelva a intentarlo!';
 		ciudad.setAttribute('class','noEx');
 		
@@ -143,7 +146,6 @@ function dibujar(weather, main, wind){
 	
 	ciudad.innerHTML = texto.toUpperCase();
 	desc.innerHTML = descripcion.toUpperCase();
-	//Si se quiere usar los iconos que se obtienen de la API se debe descomentar la linea L.150 y la L.151 comentarla.
 	//ima.src = "http://openweathermap.org/img/wn/"+weather[0]['icon']+"@4x.png";
 	ima.src = r;
 	temp.innerHTML =  parseInt(main['temp']);
@@ -158,7 +160,7 @@ function dibujar(weather, main, wind){
 }
 
 function guardarLS(result){
-	
+	console.log(result.main.temp_max);
 	const busqueda = inputElement.value;
 	const descrip = result.weather[0]['description'];
 	
